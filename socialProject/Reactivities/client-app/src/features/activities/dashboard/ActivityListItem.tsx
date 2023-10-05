@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
-import { Button, Icon, Item, ItemContent, ItemHeader, Label, Segment } from "semantic-ui-react";
+import { Button, Icon, Item, ItemContent, ItemHeader, Segment } from "semantic-ui-react";
 import { Activity } from "../../../app/models/activity";
 import { useStore } from "../../../app/stores/store";
 import { SyntheticEvent, useState } from "react";
+import { format } from "date-fns";
 
 
 interface Props {activity: Activity};
@@ -26,15 +27,16 @@ export default function ActivityListItem ({activity}: Props) {
                         <Item.Image size='tiny' circular src='/assets/user.png' />
                         <ItemContent>
                             <ItemHeader as={Link} to={`/activities/${activity.id}`} >
-                                <Item.Description>Hosted by Bob</Item.Description>
+                                {activity.title}
                             </ItemHeader>
+                            <Item.Description>Hosted by Bob</Item.Description>
                         </ItemContent>
                     </Item>
                 </Item.Group>
             </Segment>
             <Segment>
                 <span>
-                    <Icon name = 'clock' /> {activity.date}
+                    <Icon name = 'clock' /> {format(activity.date!, 'dd MMM yyyy h:mm aa')}
                     <Icon name = 'marker' /> {activity.venue}
                 </span>
             </Segment>
