@@ -1,7 +1,12 @@
  
-Work in Progress... Stay Tuned.
+Web Application for creating, editing, and joining social events.
+
+Backend: .Net\
+Client: React(with Typescript)\
+Styling: Semantic UI React\
+State Management System: MobX\
+
 <!-- Home Screen Login & Reg -->
-<!--  -->
 <img width="1710" alt="Screenshot 2024-03-29 at 6 50 23 PM" src="https://github.com/jblack016/socialProject/assets/108689417/9acd337f-03ae-44ff-800f-aad828386cd3">
 <!-- Home Screen once Logged in -->
 <img width="1710" alt="Screenshot 2024-03-29 at 6 51 14 PM" src="https://github.com/jblack016/socialProject/assets/108689417/4e4440da-0411-4664-b584-251f62a3d2dc">
